@@ -13,9 +13,9 @@ class UserManager(models.Manager):
             errors['email_in_use'] = "Email is already in use"
         if len(postData['password']) < 8:
             errors['password'] = "Your password must be at least 8 characters."
-        if postData['password'] != postData['confirm_password']:
+        if postData['password'] != postData['confirm_pass']:
             errors['confirm_password'] = "Password and Confirm password must match."
-        if len(postData['first_name']) <4 or len(postData['last_name'] <4): 
+        if len(postData['first_name']) <4 or len(postData['last_name']) <4: 
             errors['first_last_name'] = "First and last name must be at least 4 characers."
 
         return errors
