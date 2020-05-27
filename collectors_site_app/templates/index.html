@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }} has-text-danger"{% endif %}>{{ message }}</li>    
+            {% endfor %}
+        </ul>
+    {% endif %}
     <form action="/login" method="POST">
         {% csrf_token %}
         <p>Email: <input type="text" name="email" id="email"></p>
