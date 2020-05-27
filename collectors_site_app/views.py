@@ -3,9 +3,22 @@ from .models import *
 from django.contrib import messages
 import bcrypt
 
+# html renders/redirects
 def index(request):
     return render(request, 'index.html')
 
+def success(request):
+    if 'user' not in request.session:
+        return redirect('/')
+    return render(request, 'profile.html')
+
+def edit(request):
+    if 'user' not in request.session:
+        return redirect('/')
+    return render(request, 'edit.html')
+
+
+# Register
 def register(request):
     errors = User.objects.basic_validator(request.POST)
 
@@ -28,8 +41,10 @@ def register(request):
 
     request.session['user'] = new_user.first_name
     request.session['id'] = new_user.id
-    return redirect('/dashboard')
+    return redirect('/success')
 
+
+# Login
 def login(request):
     logged_email = User.objects.filter(email=request.POST['email'])
     errors = {}
@@ -43,7 +58,7 @@ def login(request):
         if bcrypt.checkpw(request.POST['password'].encode(), logged_email.password.encode()):
             request.session['user'] = logged_email.first_name
             request.session['id'] = logged_email.id
-            return redirect('/dashboard')
+            return redirect('/success')
         else:
             errors['no_match'] = "Email and password don't match"
             for key, value in errors.items():
@@ -54,3 +69,13 @@ def login(request):
 def dashboard(request):
     return HttpResponse('You are logged in!')
 
+
+# Logout
+def logout(request):
+    request.session.flush()
+    return redirect('/')
+
+# Edits
+
+def edit_profile(request):
+    return redirect('/edit')
