@@ -10,7 +10,11 @@ def index(request):
 def success(request):
     if 'user' not in request.session:
         return redirect('/')
-    return render(request, 'profile.html')
+    logged_user = User.objects.get(id = request.session['id'])
+    context = {
+        'posts' : logged_user.posts.all()
+    }
+    return render(request, 'profile.html', context)
 
 def edit(request):
     if 'user' not in request.session:
@@ -67,7 +71,7 @@ def login(request):
     return redirect('/')
 
 def dashboard(request):
-    return HttpResponse('You are logged in!')
+    return render(request, 'dashboard.html')
 
 
 # Logout
@@ -79,3 +83,14 @@ def logout(request):
 
 def edit_profile(request):
     return redirect('/edit')
+
+#Post
+
+def post(request):
+    Post.objects.create(
+        post_image = request.FILES['post_image'],
+        description = request.POST['description'],
+        poster = User.objects.get(id=request.session['id'])
+    )
+
+    return redirect('/success')
