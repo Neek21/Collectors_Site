@@ -3,27 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'profile_styles.css' %}">
 </head>
 <body>
     <div id="container">
-        <h1>Welcome to the Profile Page</h1>
+        
+        <a class="logout" href="/logout">Logout</a>
+        <a class="edit_pro" href="/edit_profile">Edit Profile</a>
+        
+        <div id="main_content">
 
-        <a href="/edit_profile">Edit Profile</a>
-        <a href="/logout">Logout</a>
+            <div class="dashboard">
+                <h3>Viewing All User's Collection</h3>
+                <div id="posted_img">
 
-        <div class="dashboard">
+                </div>
+                <!-- <button id="view_all" type="submit" formaction="/view_all" formmethod="POST">View All</button> -->
+                <a id="view_all" href="/all">View All</a>
 
+            </div>
+
+            <div class="user_collection">
+                <h3>My Collection</h3>
+                <div id="user_post">
+
+                </div>
+                <a id="view_my" href="/my_collection">View All</a>
+
+                
+            </div>
+
+            <div class="user_bio">
+                <h1>Welcome to the Profile Page</h1>
+
+            </div>
         </div>
-
-        <div class="user_collection">
-            
-        </div>
-
-        <div class="user_bio">
-            
-        </div>
-
 
     </div>
     
