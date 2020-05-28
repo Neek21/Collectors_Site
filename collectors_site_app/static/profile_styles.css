@@ -19,6 +19,8 @@
     margin: 0px 5px;
 }
 
+/* Inside the Main */
+
 #main_content{
     display: block;
     width: 1350px;
@@ -29,6 +31,14 @@
 }
 
 .dashboard{
+    display: block;
+    float: right;
+    text-decoration: none;
+    margin: 0px 5px;
+
+}
+
+/* .dashboard{
     display: inline-block;
     vertical-align: top;
     width: 350px;
@@ -36,14 +46,47 @@
     background-color: indianred;
     border: 1px solid black;
     text-align: center;
+} */ 
 
-}
 .user_collection{
     display: inline-block;
     vertical-align: top;
     width: 350px;
     height: 800px;
     background-color: indianred;
+    border: 1px solid black;
+    text-align: center;
+    
+}
+
+#posts{
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    min-height: 660px;
+    background-color: rgb(78, 49, 49);
+    border: 1px solid black;
+    text-align: center;
+    
+}
+
+.mine{
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+    height: 800px;
+    background-color: indianred;
+    border: 1px solid black;
+    text-align: center;
+    
+}
+
+#myposts{
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    min-height: 660px;
+    background-color: rgb(78, 49, 49);
     border: 1px solid black;
     text-align: center;
     
@@ -66,21 +109,35 @@
     float: right;
 }
 
+
+/* Buttons */
+
 #view_all{
     display: block;
-    margin: 0px auto;
+    margin: 17px auto;
     width: 150px;
-    height: 50px;
+    height: 20px;
+    padding: 10px;
     background-color: chartreuse;
     border: 2px solid black;
+    border-radius: 20px;
     text-decoration: none;
 }
 
 #view_my{
     display: block;
-    margin: 0px auto;
-    float: none;
+    margin: 17px auto;
     width: 150px;
-    height: 50px;
-    border: 0px solid black;
+    height: 20px;
+    padding: 10px;
+    background-color: chartreuse;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* Image Uploader */
+
+#img_uploader{
+    display: block;
 }
