@@ -84,8 +84,51 @@ def logout(request):
 
 # Edits
 
-def edit_profile(request):
-    return redirect('/edit')
+def edit(request):
+    if 'user' not in request.session:
+        return redirect('/')
+
+    context ={
+        'user' : User.objects.get(id=request.session['id'])
+    }
+
+    return render(request, 'edit.html', context)
+
+def edit_process(request):
+    logged_user = User.objects.get(id=request.session['id'] )
+    errors = {}
+    if bcrypt.checkpw(request.POST['password'].encode(), logged_user.password.encode()):
+        if logged_user.email != request.POST['email']:
+            emailCheck = User.objects.filter(email=request.POST['email'])
+            if len(emailCheck) > 0:
+                errors['email_in_use'] = 'Email is already in use'
+                for key, value in errors.items():
+                    messages.error(request, value)
+                return redirect('/edit')
+        
+        errors = User.objects.edit_validator(request.POST)
+
+        if len(errors)>0:
+            for key, value in errors.items():
+                messages.error(request, value)
+            return redirect('/edit')
+
+        password = request.POST['new_password']
+        pw_hash = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
+
+        logged_user.first_name = request.POST['first_name']
+        logged_user.last_name = request.POST['last_name']
+        logged_user.email = request.POST['email']
+        logged_user.password = pw_hash
+        logged_user.save()
+
+        return redirect('/success')
+
+    else:
+        errors['wrong_pass'] = "Incorrect password."
+        for key, value in errors.items():
+            messages.error(request, value)
+        return redirect('/edit')
 
 #Post
 
