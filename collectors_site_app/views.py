@@ -21,6 +21,9 @@ def edit(request):
         return redirect('/')
     return render(request, 'edit.html')
 
+def all_uploads(request):
+    return render(request, 'all_user_uploads.html')
+
 
 # Register
 def register(request):
@@ -94,3 +97,8 @@ def post(request):
     )
 
     return redirect('/success')
+
+# Viewing all uploads
+
+def all_mine(request):
+    return redirect('/all_user_uploads')
