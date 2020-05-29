@@ -5,6 +5,8 @@ import bcrypt
 
 # html renders/redirects
 def index(request):
+    if 'user' in request.session:
+        return redirect('/success')
     return render(request, 'index.html')
 
 def success(request):
@@ -12,7 +14,8 @@ def success(request):
         return redirect('/')
     logged_user = User.objects.get(id = request.session['id'])
     context = {
-        'posts' : logged_user.posts.all()
+        'user' : logged_user,
+        'posts' : logged_user.posts.all().order_by('-created_at')
     }
     return render(request, 'profile.html', context)
 
@@ -119,6 +122,7 @@ def edit_process(request):
         logged_user.first_name = request.POST['first_name']
         logged_user.last_name = request.POST['last_name']
         logged_user.email = request.POST['email']
+        logged_user.bio = request.POST['bio']
         logged_user.password = pw_hash
         logged_user.save()
 

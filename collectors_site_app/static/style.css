@@ -1,18 +1,15 @@
-body{
+/* body{
     text-align: center;
     background-color: #011627;
     font-family: sans-serif;
-}
+    width: 1000px;
+} */
 
 
 p, h1{
     color: white;
 }
 
-li{
-    color: red;
-    list-style: none;
-}
 
 #form{
     text-align: center;
@@ -35,4 +32,12 @@ li{
     padding-bottom: 50px;
     position: relative;
     top: -115px
+}
+
+#container{
+    text-align: center;
+    height: 820px;
+    padding: 100px;
+    background-color: #011627;
+    font-family: sans-serif; 
 }

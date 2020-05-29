@@ -4,7 +4,6 @@
     background-color: #011627;
     margin: 0px auto;
     padding: 10px;
-
 }
 .logout{
     display: block;
@@ -50,7 +49,6 @@
     width: 350px;
     height: 800px;
     border: 1px solid black;
-    
     text-align: center;
     font-family: fantasy;
     padding: 5px;
@@ -58,29 +56,23 @@
 
 .mine{
     display: inline-block;
-    position: absolute;
-    left: 625px;
     vertical-align: top;
     width: 350px;
     height: 800px;
     border: 1px solid black;
-    
     text-align: center;
     font-family: fantasy;
     padding: 5px;
+    margin-left: 380px;
 }
 
 .user_bio{
-    display: inline-block;
-    position: absolute;
-    right: 265px;
-    vertical-align: top;
+    display: block;
     width: 550px;
     height: 800px;
     border: 1px solid black;
-    
-    padding: 5px;
-    margin-left: 35px;   
+    float: right;
+    padding: 5px;   
 }
 
 .user_bio h1{
@@ -89,6 +81,26 @@
     margin-top: 5px;
 }
 
+#about_me{
+    display: block;
+    width: 510px;
+    height: 300px;
+    border: 1px solid black;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.bioHeader{
+    text-align: center;
+    font-family: fantasy;
+    color: cornsilk;
+}
+
+.bioBody{
+    text-align: center;
+    color: cornsilk;
+}
 /* Main Content */
 
 #posts{
@@ -115,10 +127,9 @@
     font-family: fantasy;
     text-align: center;
     color: cornsilk;
-
 }
 
-/* #myposts{
+#myposts{
     display: block;
     width: 335px;
     min-height: 700px;
@@ -126,17 +137,6 @@
     border: 1px solid black;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     margin: 0px auto;
-} */
-
-#myposts{
-    display: inline-block;
-    vertical-align: top;
-    width: 300px;
-    max-height: 660px;
-    background-color: rgb(78, 49, 49);
-    border: 1px solid black;
-    text-align: center;
-    padding-top: 10px;
     overflow-y: auto;
 }
 
@@ -154,7 +154,6 @@
     font-family: fantasy;
     text-align: center;
     color: cornsilk;
-
 }
 
 /* Uploads */
@@ -199,159 +198,64 @@
     margin: 0px auto;
 }
 
-
-
-
-
-
-/* .dashboard{
-    display: inline-block;
-    vertical-align: top;
-    width: 350px;
-    height: 800px;
-    background-color: indianred;
+#img_uploader{
+    display: block;
+    width: 500px;
+    height: 100px;
+    margin: 0px auto;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     border: 1px solid black;
-    text-align: center;
-} */
-
-/* .user_collection{
-    display: inline-block;
-    vertical-align: top;
-    width: 350px;
-    height: 800px;
-    border: 1px solid black;
-    text-align: center;
-    font-family: fantasy;
-    
+    padding: 15px;
 }
 
-#posts{
-    display: inline-block;
-    vertical-align: top;
-    width: 300px;
-    max-height: 650px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
-    border: 1px solid black;
-    text-align: center;
-    
-} 
-
-.mine{
-    display: inline-block;
-    vertical-align: top;
-    width: 350px;
-    height: 800px;
-    border: 1px solid black;
-    text-align: center;
-    font-family: fantasy;
-    position: relative;
-    bottom: 842px;
-    left: 436px;
-    
-} 
-
-#myposts{
-    display: inline-block;
-    vertical-align: top;
-    width: 300px;
-    max-height: 650px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
-    border: 1px solid black;
-    text-align: center;
-    
+#file{
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    color: cornsilk;
 }
 
-.user_bio{
-    display: inline-block;
-    vertical-align: top;
-    width: 600px;
-    min-height: 300px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
-    border: 1px solid black;
-    padding: 0px 10px;
-    margin-left: 20px;
-    position: relative;
-    bottom: 842px;
-    left: 428px;   
-} 
+#desc{
+    display: block;
+    width: 400px;
+    margin: 0px auto;
 
-.user_bio h1{
+}
+
+#sub{
+    display: block;
+    width: 400px;
+    height: 30px;
+    padding: 5px;
+    margin: 0px auto;
+    margin-top: 15px;
+    background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
+    border: 2px solid black;
+    border-radius: 20px;
+    font-family: fantasy;
+    text-align: center;
+    color: cornsilk;
+}
+
+/* Default Img */
+
+.defaultIMG{
+    display: block;;
+    width: 500px;
+    height: 215px;
+    border: 1px solid black;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
+    margin: 0px auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    color: cornsilk;
+}
+
+#img{
+    display: block;
+    width: 140px;
+    height: 140px;
+    border: 1px solid black;
     float: right;
-    font-family: fantasy;
-    color: cornsilk;
+    
 }
-
-
-/* Buttons */
-/* 
-#view_all{
-    display: block;
-    position: relative;
-    left: 90px;
-    bottom: 65px;
-    /* margin: 17px auto; */
-    /* width: 150px;
-    height: 20px;
-    padding: 10px;
-    background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
-    border: 2px solid black;
-    border-radius: 20px;
-    text-decoration: none;
-    font-family: fantasy;
-    text-align: center;
-    color: cornsilk;
-} */
-
-/* #view_my{
-    display: block;
-    margin: 17px auto;
-    width: 150px;
-    height: 20px;
-    padding: 10px;
-    background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
-    border: 2px solid black;
-    border-radius: 20px;
-    text-decoration: none;
-    font-family: fantasy;
-    color: cornsilk;
-} */
-
-/* Image Uploader */
-
-/* #img_uploader{
-    display: block;
-}
-
-.upload_box{
-    display: block;
-    margin: 5px auto;
-    max-width: 280px;
-    max-height: 350px;
-    border: 1px solid black;
-} */
-
-/* #one_upload{
-    display: block;
-    max-width: 300px;
-    max-height: 300px;
-    border: 1px solid black;
-    margin: 5px auto;
-} */
-
-/* .post_box{
-    display: block;
-    margin: 5px auto;
-    width: 280px;
-    height: 350px;
-    border: 1px solid black;
-}
-
-#one_post{
-    display: block;
-    max-width: 300px;
-    max-height: 300px;
-    border: 1px solid black;
-    margin: 5px auto;
-    position: relative;
-    bottom: 350px;
-} */ 

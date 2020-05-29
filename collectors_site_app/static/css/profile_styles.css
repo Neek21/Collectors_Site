@@ -11,12 +11,14 @@
     float: right;
     text-decoration: none;
     margin: 0px 5px;
+    color: cornsilk;
 }
 .edit_pro{
     display: block;
     float: right;
     text-decoration: none;
     margin: 0px 5px;
+    color: cornsilk;
 }
 
 /* Inside the Main */
@@ -24,7 +26,9 @@
 #main_content{
     display: block;
     width: 1350px;
-    height: 800px;
+    height: 810px;
+    background-image: url('https://images.pexels.com/photos/1422220/pexels-photo-1422220.jpeg?cs=srgb&dl=nine-black-and-gray-cameras-1422220.jpg&fm=jpg');
+    background-size: cover;
     padding: 15px;
     margin: 25px auto;
     border: 2px solid black;
@@ -35,6 +39,7 @@
     float: right;
     text-decoration: none;
     margin: 0px 5px;
+    color: cornsilk;
 
 }
 
@@ -50,27 +55,29 @@
 
 .user_collection{
     display: inline-block;
+    left: 625px;
     vertical-align: top;
     width: 350px;
     height: 800px;
-    background-color: indianred;
     border: 1px solid black;
     text-align: center;
-    
+    font-family: fantasy;
+    padding: 5px;
 }
 
 #posts{
     display: inline-block;
     vertical-align: top;
     width: 300px;
-    min-height: 660px;
-    background-color: rgb(78, 49, 49);
+    max-height: 660px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     border: 1px solid black;
     text-align: center;
-    
+    padding-top: 10px;
+    overflow-y: auto;
 }
 
-.mine{
+/* .mine{
     display: inline-block;
     vertical-align: top;
     width: 350px;
@@ -79,19 +86,32 @@
     border: 1px solid black;
     text-align: center;
     
+} */
+
+.mine{
+    display: inline-block;
+    left: 625px;
+    vertical-align: top;
+    width: 350px;
+    height: 800px;
+    border: 1px solid black;
+    text-align: center;
+    font-family: fantasy;
+    padding: 5px;
 }
 
 #myposts{
     display: inline-block;
     vertical-align: top;
     width: 300px;
-    min-height: 660px;
-    background-color: rgb(78, 49, 49);
+    max-height: 660px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     border: 1px solid black;
     text-align: center;
-    
+    padding-top: 10px;
+    overflow-y: auto;
 }
-
+/* 
 .user_bio{
     display: inline-block;
     vertical-align: top;
@@ -103,10 +123,25 @@
     padding: 0px 10px;
     margin-left: 20px;
     
+} */
+
+.user_bio{
+    display: inline-block;
+    position: absolute;
+    right: 265px;
+    vertical-align: top;
+    width: 550px;
+    height: 800px;
+    border: 1px solid black;
+
+    padding: 5px;
+    margin-left: 35px;   
 }
 
 .user_bio h1{
-    float: right;
+    text-align: right;
+    font-family: fantasy;
+    margin-top: 5px;
 }
 
 
@@ -114,30 +149,92 @@
 
 #view_all{
     display: block;
-    margin: 17px auto;
-    width: 150px;
-    height: 20px;
-    padding: 10px;
-    background-color: chartreuse;
+    width: 325px;
+    height: 15px;
+    padding: 5px;
+    margin: 0px auto;
+    margin-top: 4px;
+    background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
     border: 2px solid black;
     border-radius: 20px;
     text-decoration: none;
+    font-family: fantasy;
+    text-align: center;
+    color: cornsilk;
+
 }
 
 #view_my{
     display: block;
-    margin: 17px auto;
-    width: 150px;
-    height: 20px;
-    padding: 10px;
-    background-color: chartreuse;
+    width: 325px;
+    height: 15px;
+    padding: 5px;
+    margin: 0px auto;
+    margin-top: 4px;
+    background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
     border: 2px solid black;
     border-radius: 20px;
     text-decoration: none;
+    font-family: fantasy;
+    text-align: center;
+    color: cornsilk;
+
 }
 
+
+/* #myposts{
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    max-height: 660px;
+    background-color: rgb(78, 49, 49);
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 10px;
+    overflow-y: auto;
+} */
 /* Image Uploader */
 
-#img_uploader{
+/* #img_uploader{
     display: block;
+} */
+
+.post_box{
+    display: block;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 0px auto;
+}
+
+#one_post{
+    display: block;
+    min-width: 290px;
+    max-width: 290px;
+    min-height: 290px;
+    max-height: 290px;
+    border: 1px solid black;
+    margin: 0px auto;
+}
+
+.upload_box{
+    display: block;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 0px auto;
+}
+
+#profile_imgs{
+    width: 75%;
+    height: auto;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0px auto;
 }
