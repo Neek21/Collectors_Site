@@ -33,6 +33,8 @@ class UserManager(models.Manager):
             errors['confirm_password'] = "New password and confirm password must match."
         if len(postData['first_name']) <4 or len(postData['last_name']) <4: 
             errors['first_last_name'] = "First and last name must be at least 4 characers."
+        if len(postData['bio']) > 255:
+            errors['bio'] = "Your bio can only be 255 characters long."
 
         return errors
 
@@ -40,6 +42,7 @@ class User(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
+    bio = models.CharField(max_length=255, default='')
     password = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
