@@ -45,7 +45,7 @@
 
 .user_collection{
     display: inline-block;
-    position: absolute;
+    position: relative;
     vertical-align: top;
     width: 350px;
     height: 800px;
@@ -58,8 +58,7 @@
 
 .mine{
     display: inline-block;
-    position: absolute;
-    left: 625px;
+    position: relative;
     vertical-align: top;
     width: 350px;
     height: 800px;
@@ -73,7 +72,6 @@
 .user_bio{
     display: inline-block;
     position: absolute;
-    right: 265px;
     vertical-align: top;
     width: 550px;
     height: 800px;
@@ -118,7 +116,7 @@
 
 }
 
-/* #myposts{
+#myposts{
     display: block;
     width: 335px;
     min-height: 700px;
@@ -126,18 +124,6 @@
     border: 1px solid black;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     margin: 0px auto;
-} */
-
-#myposts{
-    display: inline-block;
-    vertical-align: top;
-    width: 300px;
-    max-height: 660px;
-    background-color: rgb(78, 49, 49);
-    border: 1px solid black;
-    text-align: center;
-    padding-top: 10px;
-    overflow-y: auto;
 }
 
 #view_my{
@@ -191,167 +177,30 @@
     margin: 0px auto;
 }
 
-#profile_imgs{
-    width: 75%;
-    height: auto;
-    text-align: center;
+#one_upload{
+    display: block;
+    min-width: 290px;
+    max-width: 290px;
+    min-height: 290px;
+    max-height: 290px;
     border: 1px solid black;
     margin: 0px auto;
 }
-
-
-
-
-
-
-/* .dashboard{
-    display: inline-block;
-    vertical-align: top;
-    width: 350px;
-    height: 800px;
-    background-color: indianred;
-    border: 1px solid black;
-    text-align: center;
-} */
-
-/* .user_collection{
-    display: inline-block;
-    vertical-align: top;
-    width: 350px;
-    height: 800px;
-    border: 1px solid black;
-    text-align: center;
-    font-family: fantasy;
-    
-}
-
-#posts{
-    display: inline-block;
-    vertical-align: top;
-    width: 300px;
-    max-height: 650px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
-    border: 1px solid black;
-    text-align: center;
-    
-} 
-
-.mine{
-    display: inline-block;
-    vertical-align: top;
-    width: 350px;
-    height: 800px;
-    border: 1px solid black;
-    text-align: center;
-    font-family: fantasy;
-    position: relative;
-    bottom: 842px;
-    left: 436px;
-    
-} 
 
 #myposts{
     display: inline-block;
     vertical-align: top;
     width: 300px;
-    max-height: 650px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
+    max-height: 660px;
+    background-color: rgb(78, 49, 49);
     border: 1px solid black;
     text-align: center;
-    
+    padding-top: 10px;
+    overflow-y: auto;
 }
 
-.user_bio{
-    display: inline-block;
-    vertical-align: top;
-    width: 600px;
-    min-height: 300px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
-    border: 1px solid black;
-    padding: 0px 10px;
-    margin-left: 20px;
-    position: relative;
-    bottom: 842px;
-    left: 428px;   
-} 
-
-.user_bio h1{
-    float: right;
-    font-family: fantasy;
-    color: cornsilk;
-}
-
-
-/* Buttons */
-/* 
-#view_all{
-    display: block;
-    position: relative;
-    left: 90px;
-    bottom: 65px;
-    /* margin: 17px auto; */
-    /* width: 150px;
-    height: 20px;
-    padding: 10px;
-    background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
-    border: 2px solid black;
-    border-radius: 20px;
-    text-decoration: none;
-    font-family: fantasy;
+.profile_imgs{
+    width: 75%;
+    height: auto;
     text-align: center;
-    color: cornsilk;
-} */
-
-/* #view_my{
-    display: block;
-    margin: 17px auto;
-    width: 150px;
-    height: 20px;
-    padding: 10px;
-    background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
-    border: 2px solid black;
-    border-radius: 20px;
-    text-decoration: none;
-    font-family: fantasy;
-    color: cornsilk;
-} */
-
-/* Image Uploader */
-
-/* #img_uploader{
-    display: block;
 }
-
-.upload_box{
-    display: block;
-    margin: 5px auto;
-    max-width: 280px;
-    max-height: 350px;
-    border: 1px solid black;
-} */
-
-/* #one_upload{
-    display: block;
-    max-width: 300px;
-    max-height: 300px;
-    border: 1px solid black;
-    margin: 5px auto;
-} */
-
-/* .post_box{
-    display: block;
-    margin: 5px auto;
-    width: 280px;
-    height: 350px;
-    border: 1px solid black;
-}
-
-#one_post{
-    display: block;
-    max-width: 300px;
-    max-height: 300px;
-    border: 1px solid black;
-    margin: 5px auto;
-    position: relative;
-    bottom: 350px;
-} */ 

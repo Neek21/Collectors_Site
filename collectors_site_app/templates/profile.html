@@ -6,6 +6,7 @@
     <title>Profile Page</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'profile_styles.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
 </head>
 <body>
     <div id="container">
@@ -14,7 +15,7 @@
         <a class="edit_pro" href="/edit_profile">Edit Profile</a> -->
 
         <a class="dashboard" href="/dashboard">Dashboard</a>
-        <a class="edit_pro" href="/edit_profile">Edit Profile</a>
+        <a class="edit_pro" href="/edit">Edit Profile</a>
         <a class="logout" href="/logout">Logout</a>
         
         <div id="main_content">
@@ -30,23 +31,25 @@
             <div class="user_collection">
 
                 <h3 id="h3">Most Recent Upload by all Users</h3>
+
+                
+
                 <div id="posts" data-simplebar>
                     {% for post in posts %}
-                        <img src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
-                        <p>{{ post.description }}</p>
+                        <div class="post_box"></div>
+
+                            <img id="one_post" src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
+                            <p>{{ post.description }}</p>
+
+                        </div>
                     {% endfor %}
-
-
                 </div>
 
-                <div>
-
-                    <!-- <button id="view_all" type="submit" formaction="/view_all" formmethod="POST">View All</button> -->
-                    <a id="view_all" href="/all">View All</a>
+                
+                   
+                <a id="view_all" href="/all">View All</a>
     
-                </div>
-
-
+                
             </div>
 
             <div class="mine">
@@ -55,14 +58,12 @@
 
                 <div id="myposts" data-simplebar>
                     {% for post in posts %}
-                        <img src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
-                        <p>{{ post.description }}</p>
+                        <div class="upload_box">
+                            <img id="profile_imgs" src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
+                            <p>{{ post.description }}</p>
+                        </div>
                     {% endfor %}
-
-
                 </div>
-
-
 
                 <a id="view_my" href="/my_collection">View All</a>
 
