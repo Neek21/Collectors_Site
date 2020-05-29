@@ -1,7 +1,7 @@
 #container{
     width: 1500px;
     height: 900px;
-    background-color: grey;
+    background-color: #011627;
     margin: 0px auto;
     padding: 10px;
 
@@ -21,6 +21,15 @@
     color: cornsilk;
 }
 
+.dashboard{
+    display: block;
+    float: right;
+    text-decoration: none;
+    margin: 0px 5px;
+    color: cornsilk;
+
+}
+
 /* Inside the Main */
 
 #main_content{
@@ -34,101 +43,35 @@
     border: 2px solid black;
 }
 
-.dashboard{
-    display: block;
-    float: right;
-    text-decoration: none;
-    margin: 0px 5px;
-    color: cornsilk;
-
-}
-
-/* .dashboard{
-    display: inline-block;
-    vertical-align: top;
-    width: 350px;
-    height: 800px;
-    background-color: indianred;
-    border: 1px solid black;
-    text-align: center;
-} */ 
-
 .user_collection{
     display: inline-block;
-    left: 625px;
+    position: relative;
     vertical-align: top;
     width: 350px;
     height: 800px;
     border: 1px solid black;
+
     text-align: center;
     font-family: fantasy;
     padding: 5px;
 }
-
-#posts{
-    display: inline-block;
-    vertical-align: top;
-    width: 300px;
-    max-height: 660px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
-    border: 1px solid black;
-    text-align: center;
-    padding-top: 10px;
-    overflow-y: auto;
-}
-
-/* .mine{
-    display: inline-block;
-    vertical-align: top;
-    width: 350px;
-    height: 800px;
-    background-color: indianred;
-    border: 1px solid black;
-    text-align: center;
-    
-} */
 
 .mine{
     display: inline-block;
-    left: 625px;
+    position: relative;
     vertical-align: top;
     width: 350px;
     height: 800px;
     border: 1px solid black;
+
     text-align: center;
     font-family: fantasy;
     padding: 5px;
 }
 
-#myposts{
-    display: inline-block;
-    vertical-align: top;
-    width: 300px;
-    max-height: 660px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
-    border: 1px solid black;
-    text-align: center;
-    padding-top: 10px;
-    overflow-y: auto;
-}
-/* 
-.user_bio{
-    display: inline-block;
-    vertical-align: top;
-    position: absolute;
-    width: 600px;
-    min-height: 300px;
-    background-color: indianred;
-    border: 1px solid black;
-    padding: 0px 10px;
-    margin-left: 20px;
-    
-} */
-
 .user_bio{
     display: inline-block;
     position: absolute;
-    right: 265px;
     vertical-align: top;
     width: 550px;
     height: 800px;
@@ -144,8 +87,17 @@
     margin-top: 5px;
 }
 
+/* Main Content */
 
-/* Buttons */
+#posts{
+    display: block;
+    width: 335px;
+    min-height: 700px;
+    max-height: 700px;
+    border: 1px solid black;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
+    margin: 0px auto;
+}
 
 #view_all{
     display: block;
@@ -162,6 +114,16 @@
     text-align: center;
     color: cornsilk;
 
+}
+
+#myposts{
+    display: block;
+    width: 335px;
+    min-height: 700px;
+    max-height: 700px;
+    border: 1px solid black;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
+    margin: 0px auto;
 }
 
 #view_my{
@@ -181,23 +143,7 @@
 
 }
 
-
-/* #myposts{
-    display: inline-block;
-    vertical-align: top;
-    width: 300px;
-    max-height: 660px;
-    background-color: rgb(78, 49, 49);
-    border: 1px solid black;
-    text-align: center;
-    padding-top: 10px;
-    overflow-y: auto;
-} */
-/* Image Uploader */
-
-/* #img_uploader{
-    display: block;
-} */
+/* Uploads */
 
 .post_box{
     display: block;
@@ -231,10 +177,30 @@
     margin: 0px auto;
 }
 
-#profile_imgs{
-    width: 75%;
-    height: auto;
-    text-align: center;
+#one_upload{
+    display: block;
+    min-width: 290px;
+    max-width: 290px;
+    min-height: 290px;
+    max-height: 290px;
     border: 1px solid black;
     margin: 0px auto;
 }
+
+#myposts{
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    max-height: 660px;
+    background-color: rgb(78, 49, 49);
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 10px;
+    overflow-y: auto;
+}
+
+.profile_imgs{
+    width: 75%;
+    height: auto;
+    text-align: center;
+} 

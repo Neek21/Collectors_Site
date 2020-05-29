@@ -6,6 +6,7 @@
     <title>Profile Page</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/profile_styles.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
 </head>
 <body>
     <div id="container">
@@ -27,22 +28,15 @@
             <div class="user_collection">
 
                 <h3 id="h3">Most Recent Upload by all Users</h3>
-                <div id="posts">
+                <div id="posts" data-simplebar>
                     {% for post in posts %}
-                        <img src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
-                        <p>{{ post.description }}</p>
+                            <img id="profile_imgs" src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
+                            <p>{{ post.description }}</p>
                     {% endfor %}
-
-
                 </div>
-
-                <div>
 
                     <!-- <button id="view_all" type="submit" formaction="/view_all" formmethod="POST">View All</button> -->
-                    <a id="view_all" href="/all">View All</a>
-    
-                </div>
-
+                <a id="view_all" href="/all">View All</a>
 
             </div>
 
@@ -50,13 +44,11 @@
 
                 <h3 id="h3">My Most Recent Upload</h3>
 
-                <div id="myposts">
+                <div id="myposts" data-simplebar>
                     {% for post in posts %}
-                        <img src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
-                        <p>{{ post.description }}</p>
+                            <img id="profile_imgs" src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
+                            <p>{{ post.description }}</p>
                     {% endfor %}
-
-
                 </div>
 
 

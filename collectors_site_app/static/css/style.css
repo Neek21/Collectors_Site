@@ -1,13 +1,18 @@
-
 body{
     text-align: center;
     background-color: #011627;
     font-family: sans-serif;
 }
+
+
 p, h1{
     color: white;
 }
 
+li{
+    color: red;
+    list-style: none;
+}
 
 #form{
     text-align: center;
@@ -30,4 +35,4 @@ p, h1{
     padding-bottom: 50px;
     position: relative;
     top: -115px
-} 
+}

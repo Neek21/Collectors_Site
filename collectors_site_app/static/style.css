@@ -1,8 +1,9 @@
-body{
+/* body{
     text-align: center;
     background-color: #011627;
     font-family: sans-serif;
-}
+    width: 1000px;
+} */
 
 
 p, h1{
@@ -31,4 +32,12 @@ p, h1{
     padding-bottom: 50px;
     position: relative;
     top: -115px
+}
+
+#container{
+    text-align: center;
+    height: 820px;
+    padding: 100px;
+    background-color: #011627;
+    font-family: sans-serif; 
 }
