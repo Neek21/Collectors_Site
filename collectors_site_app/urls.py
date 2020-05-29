@@ -15,9 +15,13 @@ urlpatterns = [
     path('post', views.post),
     
     path('logout', views.logout),
+    path('back', views.back),
 
-    path('all', views.all_mine),
-    path('all_user_uploads', views.all_uploads)
+    path('all', views.view_all),
+    path('all_user_uploads', views.all_uploads),
+    path('all_my_uploads', views.my_uploads),
+    path('my_collection', views.all_mine),
+    
 
 
 ]

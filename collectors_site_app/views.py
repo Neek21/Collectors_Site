@@ -25,7 +25,14 @@ def edit(request):
     return render(request, 'edit.html')
 
 def all_uploads(request):
+    if 'user' not in request.session:
+        return redirect('/')
     return render(request, 'all_user_uploads.html')
+
+def my_uploads(request):
+    if 'user' not in request.session:
+        return redirect('/')
+    return render(request, 'all_my_uploads.html')
 
 
 # Register
@@ -80,10 +87,13 @@ def dashboard(request):
     return render(request, 'dashboard.html')
 
 
-# Logout
+# Logout/Back Buttons
 def logout(request):
     request.session.flush()
     return redirect('/')
+
+def back(request):
+    return redirect('/success')
 
 # Edits
 
@@ -147,5 +157,9 @@ def post(request):
 
 # Viewing all uploads
 
-def all_mine(request):
+def view_all(request):
     return redirect('/all_user_uploads')
+
+def all_mine(request):
+    return redirect('/all_my_uploads')
+
