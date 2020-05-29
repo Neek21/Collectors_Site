@@ -3,38 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/profile_styles.css' %}">
 </head>
 <body>
     <div id="container">
-        <h1>Welcome to the Profile Page</h1>
+        
+        <!-- <a class="logout" href="/logout">Logout</a>
+        <a class="edit_pro" href="/edit_profile">Edit Profile</a> -->
 
-        <form action="/post" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <input type="file" name="post_image" id="post_image">
-            <input type="text" name="description" id="description">
-            <input type="submit" value="Post">
-        </form>
+        <a class="dashboard" href="/dashboard">Dashboard</a>
+        <a class="edit_pro" href="/edit">Edit Profile</a>
+        <a class="logout" href="/logout">Logout</a>
+        
+        <div id="main_content">
 
         <a href="/dashboard">|Dashboard</a>
         <a href="/edit">|Edit Profile</a>
         <a href="/logout">|Logout</a>
 
-        <div class="dashboard">
 
+            <div class="user_collection">
+
+                <h3 id="h3">Most Recent Upload by all Users</h3>
+                <div id="posts">
+                    {% for post in posts %}
+                        <img src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
+                        <p>{{ post.description }}</p>
+                    {% endfor %}
+
+
+                </div>
+
+                <div>
+
+                    <!-- <button id="view_all" type="submit" formaction="/view_all" formmethod="POST">View All</button> -->
+                    <a id="view_all" href="/all">View All</a>
+    
+                </div>
+
+
+            </div>
+
+            <div class="mine">
+
+                <h3 id="h3">My Most Recent Upload</h3>
+
+                <div id="myposts">
+                    {% for post in posts %}
+                        <img src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
+                        <p>{{ post.description }}</p>
+                    {% endfor %}
+
+
+                </div>
+
+
+
+                <a id="view_my" href="/my_collection">View All</a>
+
+            </div>
+
+            <div class="user_bio">
+                <h1>Welcome {{ user.first_name }}</h1>
+                <p>Bio: {{ user.bio }}</p>
+                <br>
+                
+                <div id="img_uploader">
+
+                
+
+                    <form action="/post" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="file" name="post_image" id="post_image">
+                        <input type="text" name="description" id="description">
+                        <input type="submit" value="Post">
+                    </form>
+
+                </div>
+
+            </div>
         </div>
-
-        <div class="user_collection">
-            {% for post in posts %}
-                <img src="{{ post.post_image.url }}" alt="{{ post.description }}">
-                <p>{{ post.description }}</p>
-            {% endfor %}
-        </div>
-
-        <div class="user_bio">
-            
-        </div>
-
 
     </div>
     
