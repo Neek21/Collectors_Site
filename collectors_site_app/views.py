@@ -19,7 +19,6 @@ def success(request):
     }
     return render(request, 'profile.html', context)
 
-<<<<<<< HEAD
 def my_collection(request):
     logged_user = User.objects.get(id = request.session['id'])
     context ={
@@ -28,16 +27,10 @@ def my_collection(request):
     }
 
     return render(request, 'my_collection.html', context)
-=======
-def edit(request):
-    if 'user' not in request.session:
-        return redirect('/')
-    return render(request, 'edit.html')
 
 def all_uploads(request):
     return render(request, 'all_user_uploads.html')
 
->>>>>>> e0e26d4b46e3018f5dab2d69063961c2c28075cd
 
 # Register
 def register(request):
