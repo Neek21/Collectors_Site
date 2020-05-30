@@ -22,7 +22,7 @@
                 <h3 id="h3">Most Recent Upload by all Users</h3>
 
                 <div id="posts" data-simplebar>
-                    {% for post in posts %}
+                    {% for post in all_posts %}
                             <img id="profile_imgs" src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
                             <p>{{ post.description }}</p>
                     {% endfor %}
