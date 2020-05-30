@@ -15,7 +15,8 @@ def success(request):
     logged_user = User.objects.get(id = request.session['id'])
     context = {
         'user' : logged_user,
-        'posts' : logged_user.posts.all().order_by('-created_at')
+        'posts' : logged_user.posts.all().order_by('-created_at'),
+        'all_posts' : Post.objects.all().order_by('-created_at')
     }
     return render(request, 'profile.html', context)
 

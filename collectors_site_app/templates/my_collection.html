@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Collection</title>
     {% load static %}
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="{% static 'js/my_collection.js' %}"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" href="{% static 'css/my_collection.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    
 </head>
 <body>
     <section class="hero is-dark is-medium">
         <nav>
             <div class="navbar-menu is-active">
                 <div class="navbar-end">
-                    <a class="navbar-item" href="#">Home</a>
-                    <a class="navbar-item" href="#">Dashboard</a>
-                    <a class="navbar-item" href="#">Edit Profile</a>
-                    <a class="navbar-item" href="#">Logout</a>
+                    <a class="navbar-item" href="/success">Home</a>
+                    <a class="navbar-item" href="/dashboard">Dashboard</a>
+                    <a class="navbar-item" href="/edit">Edit Profile</a>
+                    <a class="navbar-item" href="/logout">Logout</a>
                 </div>
             </div>
         </nav>
@@ -37,6 +40,14 @@
             </div>
         {% endfor %}
     </div>
-    
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <p class="image">
+            <img id="show-img" src="https://i.pinimg.com/originals/b5/6c/5f/b56c5f7b199fc861337ebc15e28259f5.jpg" alt="image">
+          </p>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
 </body>
 </html>
