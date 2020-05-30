@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Collection</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/my_collection.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <section class="hero is-dark is-medium">
+        <nav>
+            <div class="navbar-menu is-active">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#">Home</a>
+                    <a class="navbar-item" href="#">Dashboard</a>
+                    <a class="navbar-item" href="#">Edit Profile</a>
+                    <a class="navbar-item" href="#">Logout</a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-body">
+          <div class="container">
+            <h1 class='title has-text-centered'>{{ user.first_name }}'s</h1>
+            <h2 class="subtitle has-text-centered">
+              Collections
+            </h2>
+          </div>
+        </div>
+      </section>
+    <div id="container">
+        {% for post in posts %}
+            <div class="img-container">
+                <img class="collection-imgs"src="{{ post.post_image.url }}" alt="{{ post.description }}">
+            </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
