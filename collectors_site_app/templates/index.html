@@ -6,31 +6,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
     <body>
-        {% if messages %}
-            <ul class="messages">    
-                {% for message in messages %}    
-                    <li {% if message.tags %} class="{{ message.tags }} has-text-danger"{% endif %}>{{ message }}</li>    
-                {% endfor %}
-            </ul>
-        {% endif %}
-        <img id="collector" src="../media/images/collector.png">
-        <form class="register" action="/register" method="POST">
-            {% csrf_token %}
-            <p>First Name: <input type="text" name="first_name" id="first_name"></p>
-            <p>Last Name: <input type="text" name="last_name" id="last_name"></p>
-            <p>Email: <input type="email" name="email" id="email"></p>
-            <p>Password: <input type="password" name="password" id="password"></p>
-            <p>Confirm Passowrd: <input type="password" name="confirm_pass" id="confirm_pass"></p>
-            <input type="submit" value="Register">
-        </form>
-        <form class="login" action="/login" method="POST">
-            {% csrf_token %}
-            <p>Email: <input type="text" name="email" id="email"></p>
-            <p>Password: <input type="password" name="password" id="password"></p>
-            <input type="submit" value="Login">
-        </form>           
+        <div id="container">
+            {% if messages %}
+                <ul class="messages">    
+                    {% for message in messages %}    
+                        <li {% if message.tags %} class="{{ message.tags }} has-text-danger"{% endif %}>{{ message }}</li>    
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <img id="collector" src="../media/images/collector.png">
+            <form class="register" action="/register" method="POST">
+                {% csrf_token %}
+                <p>First Name: <input type="text" name="first_name" id="first_name"></p>
+                <p>Last Name: <input type="text" name="last_name" id="last_name"></p>
+                <p>Email: <input type="email" name="email" id="email"></p>
+                <p>Password: <input type="password" name="password" id="password"></p>
+                <p>Confirm Passowrd: <input type="password" name="confirm_pass" id="confirm_pass"></p>
+                <input type="submit" value="Register">
+            </form>
+            <form class="login" action="/login" method="POST">
+                {% csrf_token %}
+                <p>Email: <input type="text" name="email" id="email"></p>
+                <p>Password: <input type="password" name="password" id="password"></p>
+                <input type="submit" value="Login">
+            </form>
+        </div>               
     </body>
 </html>

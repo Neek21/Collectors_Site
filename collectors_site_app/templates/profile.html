@@ -5,32 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/profile_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'profile_styles.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
 </head>
 <body>
     <div id="container">
         
-        <!-- <a class="logout" href="/logout">Logout</a>
-        <a class="edit_pro" href="/edit_profile">Edit Profile</a> -->
-
-        <a class="dashboard" href="/dashboard">Dashboard</a>
-        <a class="edit_pro" href="/edit">Edit Profile</a>
+        <a class="dashboard" href="/dashboard"><span>|</span> Dashboard</a>
+        <a class="edit_pro" href="/edit"><span>|</span> <span>Profile</span></a>
         <a class="logout" href="/logout">Logout</a>
         
         <div id="main_content">
 
-            <!-- <form action="/post" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                <input type="file" name="post_image" id="post_image">
-                <input type="text" name="description" id="description">
-                <input type="submit" value="Post">
-            </form> -->
-
-
             <div class="user_collection">
 
                 <h3 id="h3">Most Recent Upload by all Users</h3>
+
                 <div id="posts" data-simplebar>
                     {% for post in posts %}
                             <img id="profile_imgs" src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
@@ -38,7 +28,6 @@
                     {% endfor %}
                 </div>
 
-                    <!-- <button id="view_all" type="submit" formaction="/view_all" formmethod="POST">View All</button> -->
                 <a id="view_all" href="/all">View All</a>
 
             </div>
@@ -54,26 +43,34 @@
                     {% endfor %}
                 </div>
 
-
-
                 <a id="view_my" href="/my_collection">View All</a>
 
             </div>
 
             <div class="user_bio">
-                <h1>Welcome {{ user.first_name }}</h1>
-                <p>Bio: {{ user.bio }}</p>
+
+                <div class="defaultIMG">
+                    <h1>Welcome {{ user.first_name }}</h1>
+
+                    <img id="img" src="https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg" alt="Default Image Picture">
+                </div>
+
+        
+
+                <div id="about_me">
+                    <h3 class="bioHeader">- About Me -</h3>
+                    <p class="bioBody">{{ user.bio }}</p>
+                </div>
+            
                 <br>
                 
                 <div id="img_uploader">
 
-                
-
-                    <form action="/post" method="POST" enctype="multipart/form-data">
+                    <form class="uploader" action="/post" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
-                        <input type="file" name="post_image" id="post_image">
-                        <input type="text" name="description" id="description">
-                        <input type="submit" value="Post">
+                        <input id="file" type="file" name="post_image" id="post_image">
+                        <input id="desc" type="text" name="description" id="description" placeholder="Image Description...">
+                        <input id="sub" type="submit" value="Post">
                     </form>
 
                 </div>
@@ -82,6 +79,8 @@
         </div>
 
     </div>
+
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     
 </body>
 </html>
