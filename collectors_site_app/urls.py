@@ -13,6 +13,7 @@ urlpatterns = [
     path('edit', views.edit),
     path('edit_process', views.edit_process),
     path('post', views.post),
+    path('my_collection', views.my_collection),
     
     path('logout', views.logout),
 
