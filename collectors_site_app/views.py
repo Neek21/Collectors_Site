@@ -27,10 +27,6 @@ def my_collection(request):
     }
 
     return render(request, 'my_collection.html', context)
-def edit(request):
-    if 'user' not in request.session:
-        return redirect('/')
-    return render(request, 'edit.html')
 
 def all_uploads(request):
     return render(request, 'all_user_uploads.html')
