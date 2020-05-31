@@ -12,13 +12,15 @@ urlpatterns = [
     path('success', views.success),
     path('edit', views.edit),
     path('edit_process', views.edit_process),
+    path('back', views.back),
+
     path('post', views.post),
-    path('my_collection', views.my_collection),
     
     path('logout', views.logout),
 
     path('all', views.all_mine),
     path('all_user_uploads', views.all_uploads)
+    path('my_collection', views.my_collection),
 
 
 ]
