@@ -13,6 +13,9 @@
         <a class="logout" href="/logout">| Logout</a>
 
         <h1>Now viewing most recent uploads by all users</h1>
+        {% for post in all_uploads %}
+            <p><img class="img" src="/media/{{post.post_image}}"></p>
+        {% endfor %}
     </div>
     
 </body>
