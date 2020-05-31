@@ -154,3 +154,6 @@ def post(request):
 
 def all_mine(request):
     return redirect('/all_user_uploads')
+
+def back(request):
+    return redirect('/success')
