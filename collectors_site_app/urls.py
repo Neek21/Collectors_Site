@@ -19,7 +19,7 @@ urlpatterns = [
     path('logout', views.logout),
 
     path('all', views.all_mine),
-    path('all_user_uploads', views.all_uploads)
+    path('all_user_uploads', views.all_uploads),
     path('my_collection', views.my_collection),
 
 
