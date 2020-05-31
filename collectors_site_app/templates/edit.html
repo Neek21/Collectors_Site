@@ -8,26 +8,43 @@
     <link rel="stylesheet" href="{% static 'edit.css' %}">
 </head>
 <body>
+
     <div id="container">
-        <h1>Edit your Profile</h1>
-        {% if messages %}
-            <ul class="messages">    
-                {% for message in messages %}    
-                    <li {% if message.tags %} class="{{ message.tags }} has-text-danger"{% endif %}>{{ message }}</li>    
-                {% endfor %}
-            </ul>
-        {% endif %}
-        <form action="/edit_process" method="POST">
-            {% csrf_token %}
-            <p>First Name: <input type="text" name="first_name" id="first_name" value="{{ user.first_name }}"></p>
-            <p>Last Name: <input type="text" name="last_name" id="last_name" value="{{ user.last_name }}"></p>
-            <p>Email: <input type="email" name="email" id="email" value="{{ user.email }}"></p>
-            <p>Bio: <input type="text" name="bio" id="bio" value="{{user.bio}}"></p>
-            <p>Current Password: <input type="password" name="password" id="password"></p>
-            <p>New Password: <input type="password" name="new_password" id="new_password"></p>
-            <p>Confirm New Password: <input type="password" name="confirm_pass" id="confirm_pass"></p>
-            <input type="submit" value="Update">
-        </form>
+
+        <div class="header">
+
+            <a class="back" href="/back">Back</a>
+            <a class="logout" href="/logout">| Logout</a>
+
+            <h1>- Edit your Profile -</h1>
+        </div>
+
+        <div class="form">
+
+            <form id="edit_form" action="/edit_process" method="POST">
+                {% csrf_token %}
+                <p>First Name: <input type="text" name="first_name" id="first_name" value="{{ user.first_name }}"></p>
+                <p>Last Name: <input type="text" name="last_name" id="last_name" value="{{ user.last_name }}"></p>
+                <p>Email: <input type="email" name="email" id="email" value="{{ user.email }}"></p>
+                <p>Bio: <input type="text" name="bio" id="bio" value="{{user.bio}}"></p>
+                <p>Current Password: <input type="password" name="password" id="password"></p>
+                <p>New Password: <input type="password" name="new_password" id="new_password"></p>
+                <p>Confirm New Password: <input type="password" name="confirm_pass" id="confirm_pass"></p>
+                <input type="submit" value="Update">
+            </form>
+
+        </div>
+
+        <div id="error_messages">
+            <!-- {% if messages %} -->
+                 
+            {% for message in messages %}    
+                <p id{% if message.tags %} class="{{ message.tags }} has-text-danger"{% endif %}>{{ message }}</p>    
+            {% endfor %}
+                
+            <!-- {% endif %} -->
+        </div>
+
     </div>
     
 </body>
