@@ -30,7 +30,10 @@ def my_collection(request):
     return render(request, 'my_collection.html', context)
 
 def all_uploads(request):
-    return render(request, 'all_user_uploads.html')
+    context = {
+        'all_uploads': Post.objects.all()
+    }
+    return render(request, 'all_user_uploads.html', context)
 
 
 # Register
