@@ -5,6 +5,51 @@
     height: 1000px;
     padding: 100px;   
 }
-p{
-    color: white;
+
+#container h1{
+    color: cornsilk;
+    font-family: fantasy;
+}
+
+#container p{
+    color: cornsilk;
+}
+
+#container a{
+    text-decoration: none;
+    color: cornsilk;
+}
+
+.header{
+    display: block;
+    width: 410px;
+    height: 100px;
+    border: 1px solid cornsilk;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.form{
+    display: block;
+    width: 450px;
+    height: 310px;
+    border: 1px solid cornsilk;
+    margin: 10px auto;
+}
+
+/* Error/Validation */
+
+#error_messages{
+    display: block;
+    width: 450px;
+    height: 75px;
+    border: 1px solid cornsilk;
+    margin: 0px auto;
+    padding: 20;
+}
+
+#error_messages p{
+    color: rgb(121, 21, 21);
+    text-align: center;
+
 }
