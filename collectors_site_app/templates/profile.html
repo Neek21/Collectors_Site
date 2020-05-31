@@ -12,7 +12,7 @@
     <div id="container">
         
         <a class="dashboard" href="/dashboard"><span>|</span> Dashboard</a>
-        <a class="edit_pro" href="/edit"><span>|</span> <span>Profile</span></a>
+        <a class="edit_pro" href="/edit"><span>|</span> <span>Edit Profile</span></a>
         <a class="logout" href="/logout">Logout</a>
         
         <div id="main_content">
@@ -22,7 +22,7 @@
                 <h3 id="h3">Most Recent Upload by all Users</h3>
 
                 <div id="posts" data-simplebar>
-                    {% for post in posts %}
+                    {% for post in all_posts %}
                             <img id="profile_imgs" src="{{ post.post_image.url }}" alt="{{ post.description }}" srcset="">
                             <p>{{ post.description }}</p>
                     {% endfor %}

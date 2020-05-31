@@ -15,19 +15,31 @@ def success(request):
     logged_user = User.objects.get(id = request.session['id'])
     context = {
         'user' : logged_user,
-        'posts' : logged_user.posts.all().order_by('-created_at')
+        'posts' : logged_user.posts.all().order_by('-created_at'),
+        'all_posts' : Post.objects.all().order_by('-created_at')
     }
     return render(request, 'profile.html', context)
 
-def edit(request):
-    if 'user' not in request.session:
-        return redirect('/')
-    return render(request, 'edit.html')
+def my_collection(request):
+    logged_user = User.objects.get(id = request.session['id'])
+    context ={
+        'user' : logged_user,
+        'posts' : logged_user.posts.all().order_by('-created_at')
+    }
+
+    return render(request, 'my_collection.html', context)
 
 def all_uploads(request):
+<<<<<<< HEAD
     if 'user' not in request.session:
         return redirect('/')
     return render(request, 'all_user_uploads.html')
+=======
+    context = {
+        'all_uploads': Post.objects.all()
+    }
+    return render(request, 'all_user_uploads.html', context)
+>>>>>>> 4ffdd2b6f42dcd91d1e21ccb9c2716b181715fb5
 
 def my_uploads(request):
     if 'user' not in request.session:
@@ -161,5 +173,12 @@ def view_all(request):
     return redirect('/all_user_uploads')
 
 def all_mine(request):
+<<<<<<< HEAD
     return redirect('/all_my_uploads')
 
+=======
+    return redirect('/all_user_uploads')
+
+def back(request):
+    return redirect('/success')
+>>>>>>> 4ffdd2b6f42dcd91d1e21ccb9c2716b181715fb5
