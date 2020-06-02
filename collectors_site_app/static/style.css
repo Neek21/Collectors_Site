@@ -1,15 +1,6 @@
-/* body{
-    text-align: center;
-    background-color: #011627;
-    font-family: sans-serif;
-    width: 1000px;
-} */
-
-
 p, h1{
     color: white;
 }
-
 
 #form{
     text-align: center;
@@ -26,13 +17,13 @@ p, h1{
     display: block;
     width: 400px;
     height: 130px;
-    /* border: 1px solid cornsilk; */
+    /* / border: 1px solid cornsilk; / */
     margin: 10px auto;
     position: relative;
     bottom: 120px;
-    /* padding-bottom: 100px;
+    /* / padding-bottom: 100px;
     position: relative;
-    top: -102px; */
+    top: -102px; / */
 }
 
 .login p{
@@ -43,13 +34,13 @@ p, h1{
     display: block;
     width: 400px;
     height: 240px;
-    /* border: 1px solid cornsilk; */
+    /* / border: 1px solid cornsilk; / */
     margin: 10px auto;
     position: relative;
     bottom: 120px;
-    /* padding: 50px;
+    /* / padding: 50px;
     position: relative;
-    top: -115px */
+    top: -115px / */
 }
 
 .register p{
@@ -63,7 +54,7 @@ p, h1{
     margin: 0px auto;
     position: relative;
     bottom: 100px;
-    /* border: 1px solid black; */
+    /* / border: 1px solid black; / */
     color: crimson;
     list-style: none;
 }

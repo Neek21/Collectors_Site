@@ -22,5 +22,9 @@ urlpatterns = [
     path('all_user_uploads', views.all_uploads),
     path('my_collection', views.my_collection),
 
+    path('view_post/<int:id>', views.view_post),
+    path('comment_process', views.comment_process),
+
+    path('like/<int:id>', views.like),
 
 ]

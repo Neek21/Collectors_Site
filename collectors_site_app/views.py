@@ -31,7 +31,7 @@ def my_collection(request):
 
 def all_uploads(request):
     context = {
-        'all_uploads': Post.objects.all()
+        'all_uploads': Post.objects.all().order_by('-created_at')
     }
     return render(request, 'all_user_uploads.html', context)
 
@@ -153,6 +153,25 @@ def post(request):
 
     return redirect('/success')
 
+def comment_process(request):
+    if 'user' not in request.session:
+        return redirect('/')
+    postNum = request.POST['post_num']
+    errors = Comment.objects.comment_validator(request.POST)
+    
+    if len(errors)>0:
+        for key, value in errors.items():
+            messages.error(request, value)
+        return redirect(f'/view_post/{postNum}')
+
+    Comment.objects.create(
+        comment = request.POST['comment'],
+        poster = User.objects.get(id=request.session['id']),
+        post_comment = Post.objects.get(id=postNum)
+    )
+
+    return redirect(f'/view_post/{postNum}')
+
 # Viewing all uploads
 
 def all_mine(request):
@@ -160,3 +179,16 @@ def all_mine(request):
 
 def back(request):
     return redirect('/success')
+
+def view_post(request, id):
+    context = {
+        'post' : Post.objects.get(id=id)
+    }
+
+    return render(request, 'view_post.html', context)
+
+def like(request, id):
+    liked_post = Post.objects.get(id=id)
+    user_liking = User.objects.get(id=request.session['id'])
+    liked_post.user_likes.add(user_liking)
+    return redirect(f'/view_post/{id}')

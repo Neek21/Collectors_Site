@@ -10,7 +10,6 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" href="{% static 'css/my_collection.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-    
 </head>
 <body>
     <section class="hero is-dark is-medium">
@@ -18,7 +17,7 @@
             <div class="navbar-menu is-active">
                 <div class="navbar-end">
                     <a class="navbar-item" href="/success">Home</a>
-                    <a class="navbar-item" href="/dashboard">Dashboard</a>
+                    <a class="navbar-item" href="/all">Dashboard</a>
                     <a class="navbar-item" href="/edit">Edit Profile</a>
                     <a class="navbar-item" href="/logout">Logout</a>
                 </div>
@@ -36,16 +35,19 @@
     <div id="container">
         {% for post in posts %}
             <div class="img-container">
-                <img class="collection-imgs"src="{{ post.post_image.url }}" alt="{{ post.description }}">
+                <img class="collection-imgs" src="{{ post.post_image.url }}" alt="{{ post.description }}" data-id="{{ post.id }}">
             </div>
         {% endfor %}
     </div>
     <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
-          <p class="image">
-            <img id="show-img" src="https://i.pinimg.com/originals/b5/6c/5f/b56c5f7b199fc861337ebc15e28259f5.jpg" alt="image">
-          </p>
+            <p id="description" class="title has-text-centered"> {{ post.description }}</p>
+            <p class="image">
+            <img id="show-img" src="" alt="image">
+            </p>
+            <br>
+            <a id="modalLink"class="button is-info" href=""> View Post </a>
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
     </div>

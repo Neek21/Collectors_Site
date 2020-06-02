@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>View Post</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="{% static 'css/view_post.css' %}">
+</head>
+<body>
+    <div id='wrapper'>
+        <section class="hero is-dark">
+            <nav>
+                <div class="navbar-menu is-active">
+                    <div class="navbar-end">
+                        <a class="navbar-item" href="/success">Home</a>
+                        <a class="navbar-item" href="/all">Dashboard</a>
+                        <a class="navbar-item" href="/my_collection">My Collection</a>
+                        <a class="navbar-item" href="/logout">Logout</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title has-text-centered">
+                  {{ post.description }}
+                </h1>
+              </div>
+            </div>
+          </section>
+        <div class="has-text-centered contentContainer">
+            {% if messages %}
+                <ul class="messages">    
+                    {% for message in messages %}    
+                        <li {% if message.tags %} class="{{ message.tags }} has-text-danger"{% endif %}>{{ message }}</li>    
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <img class="mainImg" src="{{ post.post_image.url }}" alt="{{ post.description }}">
+            <br>
+            <p>{{ post.user_likes.count }} 
+                <a href="/like/{{post.id}}">
+                    <span class="icon">
+                        <i class="far fa-thumbs-up"></i>
+                    </span>
+                </a>
+            </p>
+            <br>
+            <form action="/comment_process" method="POST">
+                {% csrf_token %}
+                <div class="textAreaSize">
+                    <textarea class ="textarea is-focused postTextArea" name="comment" id="comment" rows="3" placeholder="comment"></textarea>
+                </div>
+                <input type="hidden" name="post_num" value='{{post.id}}'>
+                <br>
+                <input class="button is-primary"type="submit" value="Comment">
+            </form>
+        </div>
+        <div class="commentSection">
+            <h1 class="title is-5">Comments:</h1>
+            {% for comment in post.post_comments.all %}
+             <p>{{ comment.poster.first_name}}: {{ comment.comment }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
