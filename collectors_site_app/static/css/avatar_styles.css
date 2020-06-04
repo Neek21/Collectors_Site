@@ -1,8 +1,8 @@
 #avatar{
     width: fit-content;
     display: block;
-    width: 510px;
-    height: 130px;
+    width: 500px;
+    height: 125px;
     margin: 0px auto;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     border: 1px solid black;
@@ -30,8 +30,8 @@
 }
 
 .avatar_size {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
 }
 
 .edit_container {

@@ -31,5 +31,7 @@ urlpatterns = [
     path('edit_profile_img', views.edit_pimage),
     path('upload_avatar', views.upload_avatar),
 
-    path('user_collection/<int:id>', views.user_collection)
+    path('user_collection/<int:id>', views.user_collection),
+    path('edit_profile_img', views.edit_pimage),
+    path('upload_avatar', views.upload_avatar),
 ]
