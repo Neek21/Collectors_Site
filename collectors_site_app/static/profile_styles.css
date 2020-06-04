@@ -29,17 +29,22 @@
 
 }
 
+#container h3{
+    color: cornsilk;
+}
+
 /* Inside the Main */
 
 #main_content{
     display: block;
     width: 1350px;
     height: 810px;
-    background-image: url('https://images.pexels.com/photos/1422220/pexels-photo-1422220.jpeg?cs=srgb&dl=nine-black-and-gray-cameras-1422220.jpg&fm=jpg');
-    background-size: cover;
+    background-color: #011627;
+    /* background-image: url('https://images.pexels.com/photos/1422220/pexels-photo-1422220.jpeg?cs=srgb&dl=nine-black-and-gray-cameras-1422220.jpg&fm=jpg');
+    background-size: cover; */
     padding: 15px;
     margin: 25px auto;
-    border: 2px solid black;
+    border: 2px solid cornsilk;
 }
 
 .user_collection{
@@ -48,7 +53,7 @@
     vertical-align: top;
     width: 350px;
     height: 780px;
-    border: 1px solid black;
+    border: 1px solid #011627;
     text-align: center;
     font-family: fantasy;
     padding: 5px;
@@ -59,7 +64,7 @@
     vertical-align: top;
     width: 350px;
     height: 780px;
-    border: 1px solid black;
+    border: 1px solid #011627;
     text-align: center;
     font-family: fantasy;
     padding: 5px;
@@ -70,7 +75,7 @@
     display: block;
     width: 550px;
     height: 780px;
-    border: 1px solid black;
+    border: 1px solid cornsilk;
     float: right;
     padding: 5px;   
 }
@@ -80,13 +85,14 @@
     font-family: fantasy;
     margin-top: 15px;
     margin-right: 15px;
+    color: cornsilk;
 }
 
 #about_me{
     display: block;
     width: 510px;
     height: 300px;
-    border: 1px solid black;
+    border: 1px solid #011627;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     margin: 0px auto;
     margin-top: 20px;
@@ -110,7 +116,7 @@
     width: 335px;
     min-height: 670px;
     max-height: 670px;
-    border: 1px solid black;
+    border: 1px solid cornsilk;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     margin: 0px auto;
 }
@@ -123,7 +129,7 @@
     margin: 0px auto;
     margin-top: 4px;
     background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
-    border: 2px solid black;
+    border: 2px solid #011627;
     border-radius: 20px;
     text-decoration: none;
     font-family: fantasy;
@@ -136,7 +142,7 @@
     width: 335px;
     min-height: 670px;
     max-height: 670px;
-    border: 1px solid black;
+    border: 1px solid cornsilk;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     margin: 0px auto;
     overflow-y: auto;
@@ -150,7 +156,7 @@
     margin: 0px auto;
     margin-top: 4px;
     background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
-    border: 2px solid black;
+    border: 2px solid #011627;
     border-radius: 20px;
     text-decoration: none;
     font-family: fantasy;
@@ -166,7 +172,7 @@
     max-width: 300px;
     min-height: 300px;
     max-height: 300px;
-    border: 1px solid black;
+    border: 1px solid #011627;
     text-align: center;
     margin: 0px auto;
 }
@@ -177,7 +183,7 @@
     max-width: 290px;
     min-height: 290px;
     max-height: 290px;
-    border: 1px solid black;
+    border: 1px solid #011627;
     margin: 0px auto;
 }
 
@@ -187,7 +193,7 @@
     max-width: 300px;
     min-height: 300px;
     max-height: 300px;
-    border: 1px solid black;
+    border: 1px solid #011627;
     text-align: center;
     margin: 0px auto;
 }
@@ -196,7 +202,7 @@
     width: 75%;
     height: auto;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #011627;
     margin: 0px auto;
 }
 
@@ -206,7 +212,7 @@
     height: 110px;
     margin: 0px auto;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
-    border: 1px solid black;
+    border: 1px solid #011627;
     padding: 15px;
 }
 
@@ -232,7 +238,7 @@
     margin: 0px auto;
     margin-top: 15px;
     background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
-    border: 2px solid black;
+    border: 2px solid #011627;
     border-radius: 20px;
     font-family: fantasy;
     text-align: center;
