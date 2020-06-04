@@ -1,0 +1,9 @@
+.pointer{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: cornsilk;
+    border: 1px solid darkgray;
+    
+}
