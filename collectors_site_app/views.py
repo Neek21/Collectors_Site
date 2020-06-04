@@ -16,7 +16,8 @@ def success(request):
     context = {
         'user' : logged_user,
         'posts' : logged_user.posts.all().order_by('-created_at'),
-        'all_posts' : Post.objects.all().order_by('-created_at')
+        'all_posts' : Post.objects.all().order_by('-created_at'),
+        'upload_avatar': Avatar.objects.get(id=request.session['id'])
     }
     return render(request, 'profile.html', context)
 
@@ -30,16 +31,10 @@ def my_collection(request):
     return render(request, 'my_collection.html', context)
 
 def all_uploads(request):
-<<<<<<< HEAD
-    if 'user' not in request.session:
-        return redirect('/')
-    return render(request, 'all_user_uploads.html')
-=======
     context = {
         'all_uploads': Post.objects.all()
     }
     return render(request, 'all_user_uploads.html', context)
->>>>>>> 4ffdd2b6f42dcd91d1e21ccb9c2716b181715fb5
 
 def my_uploads(request):
     if 'user' not in request.session:
@@ -156,6 +151,19 @@ def edit_process(request):
             messages.error(request, value)
         return redirect('/edit')
 
+def edit_pimage(request):
+    return redirect('/edit')      
+ 
+def upload_avatar(request):
+    print(upload_avatar)
+    Avatar.objects.create(
+        upload_avatar = request.FILES['upload_avatar'],
+        avatar_description = request.POST['avatar_description'],
+        avatar_loader = User.objects.get(id=request.session['id'])
+    )
+
+    return redirect('/success')
+    
 #Post
 
 def post(request):
@@ -173,12 +181,7 @@ def view_all(request):
     return redirect('/all_user_uploads')
 
 def all_mine(request):
-<<<<<<< HEAD
-    return redirect('/all_my_uploads')
-
-=======
     return redirect('/all_user_uploads')
 
 def back(request):
     return redirect('/success')
->>>>>>> 4ffdd2b6f42dcd91d1e21ccb9c2716b181715fb5

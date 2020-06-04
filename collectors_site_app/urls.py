@@ -19,17 +19,11 @@ urlpatterns = [
     path('logout', views.logout),
     path('back', views.back),
 
-<<<<<<< HEAD
-    path('all', views.view_all),
-    path('all_user_uploads', views.all_uploads),
-    path('all_my_uploads', views.my_uploads),
-    path('my_collection', views.all_mine),
-    
-=======
     path('all', views.all_mine),
     path('all_user_uploads', views.all_uploads),
     path('my_collection', views.my_collection),
->>>>>>> 4ffdd2b6f42dcd91d1e21ccb9c2716b181715fb5
+    path('edit_profile_img', views.edit_pimage),
+    path('upload_avatar', views.upload_avatar),
 
 
 ]

@@ -47,7 +47,7 @@
     position: absolute;
     vertical-align: top;
     width: 350px;
-    height: 800px;
+    height: 780px;
     border: 1px solid black;
     text-align: center;
     font-family: fantasy;
@@ -58,7 +58,7 @@
     display: inline-block;
     vertical-align: top;
     width: 350px;
-    height: 800px;
+    height: 780px;
     border: 1px solid black;
     text-align: center;
     font-family: fantasy;
@@ -69,7 +69,7 @@
 .user_bio{
     display: block;
     width: 550px;
-    height: 800px;
+    height: 780px;
     border: 1px solid black;
     float: right;
     padding: 5px;   
@@ -78,7 +78,8 @@
 .user_bio h1{
     text-align: right;
     font-family: fantasy;
-    margin-top: 5px;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
 #about_me{
@@ -88,6 +89,7 @@
     border: 1px solid black;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     margin: 0px auto;
+    margin-top: 20px;
     padding: 10px;
 }
 
@@ -106,8 +108,8 @@
 #posts{
     display: block;
     width: 335px;
-    min-height: 700px;
-    max-height: 700px;
+    min-height: 670px;
+    max-height: 670px;
     border: 1px solid black;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     margin: 0px auto;
@@ -116,8 +118,8 @@
 #view_all{
     display: block;
     width: 325px;
-    height: 15px;
-    padding: 5px;
+    height: 30px;
+    padding: 8px;
     margin: 0px auto;
     margin-top: 4px;
     background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
@@ -132,8 +134,8 @@
 #myposts{
     display: block;
     width: 335px;
-    min-height: 700px;
-    max-height: 700px;
+    min-height: 670px;
+    max-height: 670px;
     border: 1px solid black;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     margin: 0px auto;
@@ -143,8 +145,8 @@
 #view_my{
     display: block;
     width: 325px;
-    height: 15px;
-    padding: 5px;
+    height: 30px;
+    padding: 8px;
     margin: 0px auto;
     margin-top: 4px;
     background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
@@ -200,8 +202,8 @@
 
 #img_uploader{
     display: block;
-    width: 500px;
-    height: 100px;
+    width: 510px;
+    height: 140px;
     margin: 0px auto;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     border: 1px solid black;
@@ -237,9 +239,34 @@
     color: cornsilk;
 }
 
-/* Default Img */
+/* Footer */
 
-.defaultIMG{
+#footer{
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+}
+
+#footer p{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+}
+
+#footer a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+    margin: 0px 5px;
+}
+
+/* Default Img */ 
+
+/* .defaultIMG{
     display: block;;
     width: 500px;
     height: 215px;
@@ -258,4 +285,4 @@
     border: 1px solid black;
     float: right;
     
-}
+} */
