@@ -36,6 +36,11 @@ def all_uploads(request):
     }
     return render(request, 'all_user_uploads.html', context)
 
+def my_uploads(request):
+    if 'user' not in request.session:
+        return redirect('/')
+    return render(request, 'all_my_uploads.html')
+
 
 # Register
 def register(request):
@@ -142,6 +147,20 @@ def edit_process(request):
         for key, value in errors.items():
             messages.error(request, value)
         return redirect('/edit')
+
+def edit_pimage(request):
+    return redirect('/edit')      
+
+def upload_avatar(request):
+    print(upload_avatar)
+    Avatar.objects.create(
+        upload_avatar = request.FILES['upload_avatar'],
+        avatar_description = request.POST['avatar_description'],
+        avatar_loader = User.objects.get(id=request.session['id'])
+    )
+
+    return redirect('/success')
+
 
 #Post
 

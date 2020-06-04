@@ -1,0 +1,115 @@
+/* Trailing Cursor */
+
+/* body{
+    overflow: hidden;
+}
+
+.pointer{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: cornsilk;
+    border: 1px solid darkgray;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    box-sizing: border-box;
+    transition: 0.02s;
+   
+}
+
+.pointer1{
+    transition: 0.05s;
+}
+
+.pointer2{
+    transition: 0.10s;
+}
+
+.pointer3{
+    transition: 0.15s;
+}
+
+.pointer4{
+    transition: 0.20s;
+}
+
+.pointer5{
+    transition: 0.25s;
+} */
+
+
+/* Pulsing Cursor */
+body{
+    margin: 0;
+    height: 100vh;
+    background: darkgray;
+}
+
+.cursor{
+    top: 932px;
+    left: 65%;
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after{
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border: 5px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -5px;
+    left: -5px;
+    animation: cursorAnim2 .5s infinite alternate;
+
+
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid rgb(3, 230, 97);
+}
