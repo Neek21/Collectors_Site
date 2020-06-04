@@ -38,6 +38,16 @@ class UserManager(models.Manager):
 
         return errors
 
+class CommentManager(models.Manager):
+    def comment_validator(self, postData):
+        errors ={}
+        if len(postData['comment']) > 255:
+            errors['comment_too_long'] = "The comment can only be 255 characters"
+        if len(postData['comment']) == 0:
+            errors['comment_empty'] = "Write a comment"
+        
+        return errors
+
 class User(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -52,6 +62,22 @@ class Post(models.Model):
     post_image = models.ImageField(upload_to='images/')
     description = models.CharField(max_length=50)
     poster = models.ForeignKey(User, related_name='posts', on_delete = models.CASCADE)
+    user_likes = models.ManyToManyField(User, related_name='liked_posts')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class Comment(models.Model):
+    comment = models.CharField(max_length=255)
+    poster = models.ForeignKey(User, related_name='user_comments', on_delete = models.CASCADE)
+    post_comment = models.ForeignKey(Post, related_name='post_comments', on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = CommentManager()
+
+class Avatar(models.Model):
+    upload_avatar= models.ImageField(upload_to='images/')
+    avatar_description = models.CharField(max_length=50)
+    avatar_loader = models.ForeignKey(User, related_name='upload_avatar', on_delete = models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

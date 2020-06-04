@@ -5,18 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Uploads</title>
     {% load static %}
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="{% static 'css/all_user_uploads.css' %}">
+    <script defer src="{% static 'js/all_user_uploads.js' %}"></script>
 </head>
 <body>
+    <section class="hero is-dark">
+        <nav>
+            <div class="navbar-menu is-active">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="/back">Back</a>
+                    <a class="navbar-item" href="/logout">Logout</a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-body">
+            <div class="container">
+            <h1 class="title has-text-centered">Now viewing most recent uploads by all users</h1>
+            </div>
+        </div>
+    </section>
+    <!-- <a class="back" href="/back">Back</a>
+    <a class="logout" href="/logout">| Logout</a>
+    <h1 class="title has-text-centered">Now viewing most recent uploads by all users</h1> -->
     <div id="container">
-
-        <a class="back" href="/back">Back</a>
-        <a class="logout" href="/logout">| Logout</a>
-
-        <h1>Now viewing most recent uploads by all users</h1>
-        {% for post in all_uploads %}
-            <p><img class="img" src="/media/{{post.post_image}}"></p>
-        {% endfor %}
+        <div class="pictureDiv">
+            {% for post in all_uploads %}
+                <p><img class="img" src="{{ post.post_image.url }}" alt="{{ post.description }}" data-id="{{ post.id }}"></p>
+            {% endfor %}
+        </div>
     </div>
-    
+
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <p id="description" class="title has-text-centered"> {{ post.description }}</p>
+            <p class="image">
+            <img id="show-img" src="" alt="image">
+            </p>
+            <br>
+            <a id="modalLink"class="button is-info" href=""> View Post </a>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="footer">
+        <p class="project">	&copy;2020 Collectors Den Project By :</p>
+        <p class="by"><a href="https://github.com/Neek21">Nico Carreon</a></p><span>|</span><p><a href="https://github.com/JCIEMontemayor">John Montemayor</a></p><span>|</span><p><a href="https://github.com/Javie3">Javier Hernadez</a></p>
+    </div>
 </body>
 </html>

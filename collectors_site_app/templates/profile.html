@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     {% load static %}
+<<<<<<< HEAD
     <link rel="stylesheet" href="{% static 'profile_styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/avatar_styles.css' %}">
     <script defer src="{% static 'js/profile_script.js' %}"></script>
@@ -12,11 +13,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+=======
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+    <link rel="stylesheet" href="{% static 'profile_styles.css' %}">
+>>>>>>> a50965fcf7a33b5860bb98e165f10b3d512a0175
 </head>
 <body>
     <div id="container">
         
-        <a class="dashboard" href="/dashboard"><span>|</span> Dashboard</a>
+        <a class="dashboard" href="/my_collection"><span>|</span> My Collection</a>
+        <a class="dashboard" href="/all"><span>|</span> Dashboard</a>
         <a class="edit_pro" href="/edit"><span>|</span> <span>Edit Profile</span></a>
         <a class="logout" href="/logout">Logout</a>
         
@@ -104,7 +110,6 @@
             <p class="by"><a href="https://github.com/Neek21">Nico Carreon</a></p><span>|</span><p><a href="https://github.com/JCIEMontemayor">John Montemayor</a></p><span>|</span><p><a href="https://github.com/Javie3">Javier Hernadez</a></p>
         </div>
     </div>
-
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     
 </body>

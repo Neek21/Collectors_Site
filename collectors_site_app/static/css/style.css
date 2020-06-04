@@ -1,18 +1,15 @@
-body{
+/* body{
     text-align: center;
     background-color: #011627;
     font-family: sans-serif;
-}
+    width: 1000px;
+} */
 
 
-p, h1{
-    color: white;
-}
+/* p, h1{
+    color: cornsilk;
+} */
 
-li{
-    color: red;
-    list-style: none;
-}
 
 #form{
     text-align: center;
@@ -26,13 +23,72 @@ li{
 }
 
 .login{
-    padding-bottom: 100px;
+    display: block;
+    width: 400px;
+    height: 130px;
+    margin: 10px auto;
     position: relative;
-    top: -102px;
+    bottom: 120px;
+}
+
+.login p{
+    color: cornsilk;
 }
 
 .register{
-    padding-bottom: 50px;
+    display: block;
+    width: 400px;
+    height: 240px; 
+    margin: 10px auto;
     position: relative;
-    top: -115px
+    bottom: 120px;
+}
+
+.register p{
+    color: cornsilk;
+}
+
+.messages{
+    display: block;
+    width: 300px;
+    height: 50px;
+    margin: 0px auto;
+    position: relative;
+    bottom: 100px;
+    color: crimson;
+    list-style: none;
+}
+
+#container{
+    text-align: center;
+    height: 820px;
+    padding: 100px;
+    background-color: #011627;
+    font-family: sans-serif; 
+}
+
+/* Footer */
+
+#footer{
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+}
+
+#footer p{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+    margin: 10px 5px;
+}
+
+#footer a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+    margin: 10px 5px;
 }

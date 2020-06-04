@@ -1,4 +1,4 @@
-$('.collection-imgs').click(function(){
+$('.img').click(function(){
     let src = $(this).attr("src");
     let alt = $(this).attr("alt");
     let postId = $(this).attr("data-id");
