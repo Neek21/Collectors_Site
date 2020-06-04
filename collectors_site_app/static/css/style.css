@@ -54,7 +54,7 @@
     height: 50px;
     margin: 0px auto;
     position: relative;
-    bottom: 100px;
+    bottom: 160px;
     color: crimson;
     list-style: none;
 }
@@ -91,4 +91,21 @@
     text-decoration: none;
     color: cornsilk;
     margin: 10px 5px;
+}
+
+/* Forgot Password */
+
+.fpassword{
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    color: cornsilk;
+    position: relative;
+    bottom: 100px;
+
+}
+
+#fpass{
+    color: crimson;
+    text-decoration: none;
 }

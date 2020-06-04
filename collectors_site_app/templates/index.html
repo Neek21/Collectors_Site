@@ -8,6 +8,7 @@
         {% load static %}
         <link rel="stylesheet" href="{% static 'style.css' %}">
         <link rel="stylesheet" href="{% static 'css/index_pointer.css' %}">
+        <link rel="stylesheet" href="{% static 'css/index_buttons.css' %}">
 
         <script defer src="{% static 'js/index_pointer_script.js' %}"></script>
     </head>
@@ -24,15 +25,16 @@
                 <p>Email: <input type="email" name="email" id="email"></p>
                 <p>Password: <input type="password" name="password" id="password"></p>
                 <p>Confirm Passowrd: <input type="password" name="confirm_pass" id="confirm_pass"></p>
-                <input type="submit" value="Register">
+                <input id="b" type="submit" value="Register">
             </form>
 
             <form class="login" action="/login" method="POST">
                 {% csrf_token %}
                 <p>Email: <input type="text" name="email" id="email"></p>
                 <p>Password: <input type="password" name="password" id="password"></p>
-                <input type="submit" value="Login">
+                <input id="b" type="submit" value="Login">
             </form>
+            <p class="fpassword">Forgot Password ? <a id="fpass" href="#">Click Here</a></p>
 
             {% if messages %}
                 <ul class="messages">    
