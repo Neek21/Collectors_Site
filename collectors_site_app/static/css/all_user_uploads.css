@@ -16,3 +16,26 @@
     padding-top: 1%;
     padding-bottom: 1%;
 }
+
+#footer{
+    display: block;
+    margin: 100px auto;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#footer p{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#footer a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin: 0px 5px;
+}

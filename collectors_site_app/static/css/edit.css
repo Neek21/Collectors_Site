@@ -3,7 +3,7 @@
     background-color: #011627;
     font-family: sans-serif;
     height: 1000px;
-    padding: 100px;
+    padding: 100px;   
 }
 
 #container h1{
@@ -26,6 +26,7 @@
     height: 100px;
     border: 1px solid cornsilk;
     margin: 10px auto;
+    margin-top: 130px;
     padding: 20px;
 }
 
@@ -37,19 +38,69 @@
     margin: 10px auto;
 }
 
-/* / Error/Validation / */
-
-#error_messages{
+#img_uploader{
     display: block;
-    width: 450px;
+    width: 410px;
     height: 75px;
     border: 1px solid cornsilk;
     margin: 0px auto;
-    padding: 20;
+    padding: 20px;
+    color: cornsilk;
+}
+
+#sub{
+    display: block;
+    width: 400px;
+    height: 30px;
+    padding: 5px;
+    margin: 0px auto;
+    margin-top: 15px;
+    background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
+    border: 2px solid black;
+    border-radius: 20px;
+    font-family: fantasy;
+    text-align: center;
+    color: cornsilk;
+}
+
+/* Error/Validation */
+
+#error_messages{
+    display: block;
+    width: 410px;
+    height: 75px;
+    border: 1px solid cornsilk;
+    margin: 0px auto;
+    padding: 20px;
 }
 
 #error_messages p{
     color: rgb(121, 21, 21);
     text-align: center;
 
+}
+
+/* Footer */
+
+#footer{
+    display: block;
+    margin: 100px auto;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+}
+
+#footer p{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+}
+
+#footer a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+    margin: 0px 5px;
 }

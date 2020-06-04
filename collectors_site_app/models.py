@@ -73,3 +73,10 @@ class Comment(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = CommentManager()
+
+class Avatar(models.Model):
+    upload_avatar= models.ImageField(upload_to='images/')
+    avatar_description = models.CharField(max_length=50)
+    avatar_loader = models.ForeignKey(User, related_name='upload_avatar', on_delete = models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

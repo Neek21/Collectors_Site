@@ -26,5 +26,8 @@ urlpatterns = [
     path('comment_process', views.comment_process),
 
     path('like/<int:id>', views.like),
-    path('delete/<int:id>', views.delete)
+    path('delete/<int:id>', views.delete),
+
+    path('edit_profile_img', views.edit_pimage),
+    path('upload_avatar', views.upload_avatar),
 ]

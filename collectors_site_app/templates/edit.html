@@ -19,6 +19,17 @@
             <h1>- Edit your Profile -</h1>
         </div>
 
+        <div id="img_uploader">
+
+            <form class="uploader" action="/upload_avatar" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="upload_avatar" id="upload_avatar">
+                <input type="text" name="avatar_description" id="avatar_description" placeholder="Avatar Description...">
+                <input id="sub" type="submit" value="Update User Avatar">
+            </form>
+
+        </div>
+
         <div class="form">
 
             <form id="edit_form" action="/edit_process" method="POST">
@@ -45,6 +56,10 @@
             <!-- {% endif %} -->
         </div>
 
+        <div id="footer">
+            <p class="project">	&copy;2020 Collectors Den Project By :</p>
+            <p class="by"><a href="https://github.com/Neek21">Nico Carreon</a></p><span>|</span><p><a href="https://github.com/JCIEMontemayor">John Montemayor</a></p><span>|</span><p><a href="https://github.com/Javie3">Javier Hernadez</a></p>
+        </div>
     </div>
     
 </body>

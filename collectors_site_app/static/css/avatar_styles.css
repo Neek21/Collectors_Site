@@ -1,0 +1,55 @@
+#avatar{
+    width: fit-content;
+    display: block;
+    width: 510px;
+    height: 130px;
+    margin: 0px auto;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
+    border: 1px solid black;
+    padding: 15px;
+
+}
+
+.avatar_container {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    left: 380px;
+
+}
+
+.avatar_image {
+    border-radius: 50%;
+    height: 100%;
+    width: auto;
+    
+
+}
+
+.avatar_size {
+    width: 10rem;
+    height: 10rem;
+}
+
+.edit_container {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
+    bottom: 0;
+    height: 33%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+    font-size: 200%;
+    overflow: hidden;
+
+}
+
+.avatar_container:hover .edit_container {
+    opacity: 1;
+}

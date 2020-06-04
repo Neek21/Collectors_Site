@@ -16,7 +16,8 @@ def success(request):
     context = {
         'user' : logged_user,
         'posts' : logged_user.posts.all().order_by('-created_at'),
-        'all_posts' : Post.objects.all().order_by('-created_at')
+        'all_posts' : Post.objects.all().order_by('-created_at'),
+        # 'upload_avatar': Avatar.objects.get(id=request.session['id'])
     }
     return render(request, 'profile.html', context)
 
@@ -197,3 +198,21 @@ def delete(request, id):
     post = Post.objects.get(id=id)
     post.delete()
     return redirect('/my_collection')
+
+def my_uploads(request):
+    if 'user' not in request.session:
+        return redirect('/')
+    return render(request, 'all_my_uploads.html')
+
+def edit_pimage(request):
+    return redirect('/edit')      
+ 
+def upload_avatar(request):
+    print(upload_avatar)
+    Avatar.objects.create(
+        upload_avatar = request.FILES['upload_avatar'],
+        avatar_description = request.POST['avatar_description'],
+        avatar_loader = User.objects.get(id=request.session['id'])
+    )
+
+    return redirect('/success')

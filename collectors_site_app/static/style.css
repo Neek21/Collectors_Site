@@ -1,6 +1,15 @@
-p, h1{
-    color: white;
-}
+/* body{
+    text-align: center;
+    background-color: #011627;
+    font-family: sans-serif;
+    width: 1000px;
+} */
+
+
+/* p, h1{
+    color: cornsilk;
+} */
+
 
 #form{
     text-align: center;
@@ -17,13 +26,9 @@ p, h1{
     display: block;
     width: 400px;
     height: 130px;
-    /* / border: 1px solid cornsilk; / */
     margin: 10px auto;
     position: relative;
     bottom: 120px;
-    /* / padding-bottom: 100px;
-    position: relative;
-    top: -102px; / */
 }
 
 .login p{
@@ -33,14 +38,10 @@ p, h1{
 .register{
     display: block;
     width: 400px;
-    height: 240px;
-    /* / border: 1px solid cornsilk; / */
+    height: 240px; 
     margin: 10px auto;
     position: relative;
     bottom: 120px;
-    /* / padding: 50px;
-    position: relative;
-    top: -115px / */
 }
 
 .register p{
@@ -54,7 +55,6 @@ p, h1{
     margin: 0px auto;
     position: relative;
     bottom: 100px;
-    /* / border: 1px solid black; / */
     color: crimson;
     list-style: none;
 }
@@ -65,4 +65,30 @@ p, h1{
     padding: 100px;
     background-color: #011627;
     font-family: sans-serif; 
+}
+
+/* Footer */
+
+#footer{
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+}
+
+#footer p{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+    margin: 10px 5px;
+}
+
+#footer a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+    margin: 10px 5px;
 }
