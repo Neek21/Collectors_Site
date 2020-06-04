@@ -7,6 +7,9 @@
         <title>Document</title>
         {% load static %}
         <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/index_pointer.css' %}">
+
+        <script defer src="{% static 'js/index_pointer_script.js' %}"></script>
     </head>
 
     <body>
@@ -44,8 +47,23 @@
                 <p class="by"><a href="https://github.com/Neek21">Nico Carreon</a></p><span>|</span><p><a href="https://github.com/JCIEMontemayor">John Montemayor</a></p><span>|</span><p><a href="https://github.com/Javie3">Javier Hernadez</a></p>
             </div>
 
-            
+            <!-- Pulsing Cursor -->
+            <div class="cursor"></div>
 
-        </div>               
+            <!-- Trailing Cursor -->
+            <!-- <div class="trail">
+                <div class="pointer pointer1"></div>
+                <div class="pointer pointer2"></div>
+                <div class="pointer pointer3"></div>
+                <div class="pointer pointer4"></div>
+                <div class="pointer pointer5"></div>
+            </div> -->
+
+        </div>  
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript">
+        
+        </script>
     </body>
 </html>

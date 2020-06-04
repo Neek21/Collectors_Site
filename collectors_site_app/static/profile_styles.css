@@ -118,8 +118,8 @@
 #view_all{
     display: block;
     width: 325px;
-    height: 30px;
-    padding: 8px;
+    height: 20px;
+    padding: 5px;
     margin: 0px auto;
     margin-top: 4px;
     background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
@@ -145,8 +145,8 @@
 #view_my{
     display: block;
     width: 325px;
-    height: 30px;
-    padding: 8px;
+    height: 20px;
+    padding: 5px;
     margin: 0px auto;
     margin-top: 4px;
     background: radial-gradient(circle, rgba(88,89,91,1) 0%, rgba(0,0,0,1) 100%);
@@ -202,8 +202,8 @@
 
 #img_uploader{
     display: block;
-    width: 510px;
-    height: 140px;
+    width: 500px;
+    height: 110px;
     margin: 0px auto;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
     border: 1px solid black;
@@ -243,61 +243,26 @@
 
 #footer{
     display: block;
-<<<<<<< HEAD
     margin: 0px auto;
     text-align: center;
     text-decoration: none;
     color: cornsilk;
-=======
-    margin: 100px auto;
-    text-align: center;
-    text-decoration: none;
-    color: black;
->>>>>>> a50965fcf7a33b5860bb98e165f10b3d512a0175
+    position: relative;
+    bottom: 25px;
 }
 
 #footer p{
     display: inline-block;
     text-align: center;
     text-decoration: none;
-<<<<<<< HEAD
     color: cornsilk;
-=======
-    color: black;
->>>>>>> a50965fcf7a33b5860bb98e165f10b3d512a0175
 }
 
 #footer a{
     display: inline-block;
     text-align: center;
     text-decoration: none;
-<<<<<<< HEAD
     color: cornsilk;
-=======
-    color: black;
->>>>>>> a50965fcf7a33b5860bb98e165f10b3d512a0175
     margin: 0px 5px;
 }
 
-/* Default Img */ 
-
-/* .defaultIMG{
-    display: block;;
-    width: 500px;
-    height: 215px;
-    border: 1px solid black;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(1,22,38,1) 0%, rgba(255,255,255,1) 100%);
-    margin: 0px auto;
-    margin-bottom: 15px;
-    padding: 15px;
-    color: cornsilk;
-}
-
-#img{
-    display: block;
-    width: 140px;
-    height: 140px;
-    border: 1px solid black;
-    float: right;
-    
-} */

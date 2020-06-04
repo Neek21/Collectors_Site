@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     {% load static %}
-<<<<<<< HEAD
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
     <link rel="stylesheet" href="{% static 'profile_styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/avatar_styles.css' %}">
-    <script defer src="{% static 'js/profile_script.js' %}"></script>
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-=======
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
-    <link rel="stylesheet" href="{% static 'profile_styles.css' %}">
->>>>>>> a50965fcf7a33b5860bb98e165f10b3d512a0175
+
 </head>
 <body>
     <div id="container">
@@ -68,7 +63,7 @@
                     
                     <div class="avatar_container avatar_size">
                         
-                        <img class="avatar_image" id="img" src="https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg" alt="Default Picuter">
+                        <img class="avatar_image" src="https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg" alt="Default Picuter">
 
                         <!-- <img class="avatar_image" id="img" src="{{ upload_avatar.upload_vatar.url }}" alt=""> -->
 
@@ -76,7 +71,7 @@
                     
                         <div class="edit_container">
                             <div>
-                                <a href="/edit_profile_img"><span class="glyphicon glyphicon-camera"></span></a>
+                                <a href="/edit_profile_img"><span class="glyphicon">&#xe046;</span></a>
                             </div>
                         </div>
                         
@@ -109,6 +104,7 @@
             <p class="project">	&copy;2020 Collectors Den Project By :</p>
             <p class="by"><a href="https://github.com/Neek21">Nico Carreon</a></p><span>|</span><p><a href="https://github.com/JCIEMontemayor">John Montemayor</a></p><span>|</span><p><a href="https://github.com/Javie3">Javier Hernadez</a></p>
         </div>
+
     </div>
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     
