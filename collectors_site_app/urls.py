@@ -26,5 +26,5 @@ urlpatterns = [
     path('comment_process', views.comment_process),
 
     path('like/<int:id>', views.like),
-
+    path('delete/<int:id>', views.delete)
 ]

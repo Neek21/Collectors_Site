@@ -192,3 +192,8 @@ def like(request, id):
     user_liking = User.objects.get(id=request.session['id'])
     liked_post.user_likes.add(user_liking)
     return redirect(f'/view_post/{id}')
+
+def delete(request, id):
+    post = Post.objects.get(id=id)
+    post.delete()
+    return redirect('/my_collection')
