@@ -216,3 +216,12 @@ def upload_avatar(request):
     )
 
     return redirect('/success')
+
+def user_collection(request, id):
+    user_collection = User.objects.get(id=id)
+    context ={
+        'user' : user_collection,
+        'posts' : user_collection.posts.all().order_by('-created_at')
+    }
+
+    return render(request, 'other_collection.html', context)
